@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ibtissemjenniangular 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ibtissemjenniangular
+  template:
+    metadata:
+      labels:
+        app: ibtissemjenniangular 
+    spec:
+      containers:
+        - name: ibtissemjenniangular 
+          image: ibtissemrepo.azurecr.io/ibtissemjenniangular
+          ports:
+          - containerPort: 80
